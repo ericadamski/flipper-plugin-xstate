@@ -1,0 +1,55 @@
+{
+  "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
+  "name": "flipper-plugin-react-native-xstate-inspect",
+  "id": "xstate-inspect",
+  "version": "0.0.1",
+  "pluginType": "client",
+  "main": "dist/bundle.js",
+  "flipperBundlerEntry": "src/index.tsx",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Adamski",
+    "url": "https://github.com/ericadamski"
+  },
+  "keywords": [
+    "flipper-plugin",
+    "react-native",
+    "xstate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericadamski/flipper-plugin-xstate.git"
+  },
+  "icon": "rocket",
+  "title": "XState inspect",
+  "scripts": {
+    "lint": "flipper-pkg lint",
+    "build": "flipper-pkg bundle",
+    "prepack": "flipper-pkg bundle",
+    "watch": "flipper-pkg bundle --watch",
+    "test": "jest --no-watchman"
+  },
+  "peerDependencies": {
+    "flipper": "*",
+    "flipper-plugin": "*"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "latest",
+    "@babel/preset-typescript": "latest",
+    "@testing-library/react": "latest",
+    "@types/jest": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/ws": "^8.5.3",
+    "@xstate/inspect": "^0.7.0",
+    "antd": "latest",
+    "flipper-pkg": "^0.149.0",
+    "flipper-plugin": "latest",
+    "jest": "latest",
+    "typescript": "latest",
+    "xstate": "^4.32.1"
+  },
+  "dependencies": {
+    "ws": "^8.2.2"
+  }
+}

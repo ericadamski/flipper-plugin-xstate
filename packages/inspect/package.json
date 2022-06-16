@@ -1,0 +1,34 @@
+{
+  "name": "react-native-xstate-inspect",
+  "version": "0.0.1",
+  "description": "React Native package that powers the flipper xstate inspect plugin",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/ericadamski/flipper-plugin-xstate",
+  "author": {
+    "name": "Eric Adamski",
+    "url": "https://github.com/ericadamski"
+  },
+  "scripts": {
+    "prepack": "tsc",
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "keywords": [
+    "flipper-plugin",
+    "react native",
+    "xstate",
+    "expo"
+  ],
+  "peerDependencies": {
+    "react-native": ">0.62.0"
+  },
+  "dependencies": {
+    "@xstate/inspect": "latest",
+    "react-native-flipper": "latest",
+    "xstate": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
