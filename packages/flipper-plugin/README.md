@@ -1,17 +1,16 @@
-# Flipper Plugin Xstate
+# Flipper Plugin XState Inspect
 
-This plugin allows you to display an [XState Inspector](https://statecharts.io/inspect) as a tab in flipper. 
+This plugin allows you to display the [XState Inspector](https://stately.ai/viz?inspect) as a tab in flipper.
 
-You must also use the [react-native-flipper-xstate](https://github.com/cpetzel/react-native-flipper-xstate) package for this to function.
-
-![Xstate Viz](static/xstate-viz-rn.gif?raw=true "Xstate Viz")
+You must also use the [react-native-xstate-inspect](https://github.com/ericadamski/flipper-plugin-xstate-inspect/tree/main/packages/inspect) package for this to function.
 
 
 # Usage
-### Install the Flipper plugin. 
+### Install the Flipper plugin.
 
-Simply search for 'xstate' in the `Plugin Manager` in Flipper.
-![image](https://user-images.githubusercontent.com/2036206/135663275-b292d581-641e-4e59-92d8-4f09d97b2058.png)
+Simply search for 'react-native-xstate' in the `Plugin Manager` in Flipper.
+
+![how to install](https://user-images.githubusercontent.com/6516758/174395220-62635ef5-ee06-481d-9c6b-d0032e6f6c29.png)
 
 
 
