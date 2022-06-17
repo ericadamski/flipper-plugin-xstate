@@ -1,5 +1,5 @@
 {
-  "name": "@ericadamski/rn-xstate-inspect",
+  "name": "rn-xstate-inspect",
   "private": true,
   "packageManager": "yarn@3.2.1",
   "workspaces": [

@@ -1,9 +1,10 @@
-import { Inspector, InspectorOptions, ServiceListener } from "@xstate/inspect";
+import { Inspector, ServiceListener } from "@xstate/inspect";
 import { createInspectMachine } from "@xstate/inspect/lib/inspectMachine";
 import { stringify } from "@xstate/inspect/lib/utils";
 import { addPlugin, Flipper } from "react-native-flipper";
-import { AnyActorRef, AnyInterpreter, AnyState, interpret } from "xstate";
+import { AnyActorRef, AnyInterpreter, interpret } from "xstate";
 import { toEventObject, toSCXMLEvent } from "xstate/lib/utils";
+import FlipperXStateInspectPackage from "flipper-plugin-react-native-xstate-inspect/package.json";
 
 const services = new Set<AnyInterpreter>();
 const serviceMap = new Map();
@@ -44,13 +45,13 @@ function createDevTools() {
   };
 }
 
-type XStateInspectorOptions = Pick<InspectorOptions, "url"> & {
+type InspectorOptions = XStateInspectorOptions & {
   debug?: boolean;
 };
 
 function initializePlugin(
   inspectService: AnyInterpreter,
-  options: XStateInspectorOptions
+  options: InspectorOptions
 ) {
   let forwarder: AnyActorRef;
 
@@ -87,6 +88,7 @@ function initializePlugin(
         console.warn(
           `${logTag} - got a message from desktop that is not a JS object. type is == ${typeof message}`
         );
+
         return;
       }
 
@@ -105,7 +107,7 @@ function initializePlugin(
 
   addPlugin({
     getId() {
-      return "xstate";
+      return FlipperXStateInspectPackage.id;
     },
     onConnect,
     onDisconnect,
@@ -115,7 +117,7 @@ function initializePlugin(
   });
 }
 
-export function inspect(options: XStateInspectorOptions): Inspector {
+export function inspect(options: InspectorOptions): Inspector {
   createDevTools();
 
   const inspectService = interpret(

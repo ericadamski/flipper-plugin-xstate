@@ -4,7 +4,9 @@
     "baseUrl": ".",
     "outDir": "dist",
     "noEmit": false,
-    "declaration": true
+    "declaration": true,
+    "resolveJsonModule": true
   },
-  "include": ["./src/**/*", "./@types/**/*"]
+  "include": ["./src/**/*", "./@types/**/*", "../../@types/**/*"],
+  "exclud": ["node_modules", "../../node_modules"]
 }

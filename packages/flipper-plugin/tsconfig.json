@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "preserve",
-    "incremental": true,
+    "incremental": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "../../@types/**/*"],
+  "exclude": ["node_modules", "../../node_modules"]
 }

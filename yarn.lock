@@ -1793,12 +1793,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ericadamski/rn-xstate-inspect@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@ericadamski/rn-xstate-inspect@workspace:."
-  languageName: unknown
-  linkType: soft
-
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -2615,6 +2609,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/qs@npm:^6.9.7":
+  version: 6.9.7
+  resolution: "@types/qs@npm:6.9.7"
+  checksum: 7fd6f9c25053e9b5bb6bc9f9f76c1d89e6c04f7707a7ba0e44cc01f17ef5284adb82f230f542c2d5557d69407c9a40f0f3515e8319afd14e1e16b5543ac6cdba
+  languageName: node
+  linkType: hard
+
 "@types/react-color@npm:^3.0.6":
   version: 3.0.6
   resolution: "@types/react-color@npm:3.0.6"
@@ -2666,13 +2667,13 @@ __metadata:
   linkType: hard
 
 "@types/react@npm:^17":
-  version: 17.0.46
-  resolution: "@types/react@npm:17.0.46"
+  version: 17.0.47
+  resolution: "@types/react@npm:17.0.47"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 10e41e74aef40363a47a7aeb11b0179854eca0e0635300aac54a81f10ab0cbd7b8d099fed19ae919e25ceae42518db8a25d481625c23b97d7fdc10d1934b710c
+  checksum: 2e7fe0eb630cb77da03b6da308c58728c01b38e878118e9ff5cd8045181c8d4f32dc936e328f46a62cadb56e1fe4c5a911b5113584f93a99e1f35df7f059246b
   languageName: node
   linkType: hard
 
@@ -4539,7 +4540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flipper-pkg@npm:^0.149.0":
+"flipper-pkg@npm:latest":
   version: 0.149.0
   resolution: "flipper-pkg@npm:0.149.0"
   dependencies:
@@ -4583,7 +4584,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flipper-plugin-react-native-xstate-inspect@workspace:packages/flipper-plugin":
+"flipper-plugin-react-native-xstate-inspect@workspace:*, flipper-plugin-react-native-xstate-inspect@workspace:packages/flipper-plugin":
   version: 0.0.0-use.local
   resolution: "flipper-plugin-react-native-xstate-inspect@workspace:packages/flipper-plugin"
   dependencies:
@@ -4591,12 +4592,13 @@ __metadata:
     "@babel/preset-typescript": latest
     "@testing-library/react": latest
     "@types/jest": latest
+    "@types/qs": ^6.9.7
     "@types/react": latest
     "@types/react-dom": latest
     "@types/ws": ^8.5.3
     "@xstate/inspect": ^0.7.0
     antd: latest
-    flipper-pkg: ^0.149.0
+    flipper-pkg: latest
     flipper-plugin: latest
     jest: latest
     typescript: latest
@@ -8003,11 +8005,14 @@ __metadata:
   resolution: "react-native-xstate-inspect@workspace:packages/inspect"
   dependencies:
     "@xstate/inspect": latest
+    flipper-plugin-react-native-xstate-inspect: "workspace:*"
     react-native-flipper: latest
     typescript: ^4.4.3
     xstate: latest
   peerDependencies:
+    react: "*"
     react-native: ">0.62.0"
+    ws: "*"
   languageName: unknown
   linkType: soft
 
@@ -8284,6 +8289,12 @@ __metadata:
   checksum: 01804e1c0430eeece3fd778e836e9682c011e126d42a4f560e930f8cdc2d99c7e586e63d18c5a65accbd51f9ac57706177550de0538c1dd45c335755605de166
   languageName: node
   linkType: hard
+
+"rn-xstate-inspect@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "rn-xstate-inspect@workspace:."
+  languageName: unknown
+  linkType: soft
 
 "run-async@npm:^2.4.0":
   version: 2.4.1
